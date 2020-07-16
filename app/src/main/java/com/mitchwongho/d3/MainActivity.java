@@ -1,12 +1,9 @@
 package com.mitchwongho.d3;
 
 import android.content.Context;
-import android.content.res.AssetManager;
-import android.support.v7.app.ActionBarActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.Window;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -16,21 +13,17 @@ import android.webkit.WebViewClient;
 import com.google.gson.Gson;
 import com.mitchwongho.d3.domain.DataPoint;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.BindView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
-    @InjectView( R.id.webview)
+    @BindView( R.id.webview)
     WebView webview;
 
     public class WebAppInterface {
@@ -67,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject( this );
+        ButterKnife.bind( this );
     }
 
     @Override
