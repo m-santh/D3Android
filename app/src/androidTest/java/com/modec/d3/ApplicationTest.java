@@ -1,4 +1,4 @@
-package com.mitchwongho.d3;
+package com.modec.d3;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,4 +1,4 @@
-package com.mitchwongho.d3.domain;
+package com.modec.d3.domain;
 
 import java.io.Serializable;
 
